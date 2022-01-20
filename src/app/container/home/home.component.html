@@ -1,0 +1,39 @@
+<div class="container-fluid vh-100" style="background: #343434">
+  <div>
+    <h1 class="upper-section">uppper section</h1>
+    <!--<div class="remote-user">
+      <img class="rounded-circle" height="20px" width="20px" src="https://t3.ftcdn.net/jpg/03/46/83/96/240_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"/>
+      <span class="ml-2">Gianna</span>
+      <i class="fa fa-check round ml-2" aria-hidden="true"></i>
+    </div>-->
+  </div>
+  <div class="row">
+    <div class="row col-md-12 col-sm-12 text-center">
+      <div class="col-md-3">
+      </div>
+      <div class="col-md-9 col-sm-12 video-wrapper">
+        <div class="remote-user">
+          <img class="rounded-circle" height="25px" width="25px" src="https://t3.ftcdn.net/jpg/03/46/83/96/240_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"/>
+          <span class="ml-2">Gianna</span>
+          <i class="fa fa-check round ml-2" aria-hidden="true"></i>
+        </div>
+        <video #remoteVideo class="remote-video" poster="./assets/video-placeholder.jpg" autoplay playsinline></video>
+        <video #localVideo class="local-video" autoplay playsinline [muted]="isMuted"></video>
+      </div>
+    </div>
+
+    <div class="row col-md-12 col-sm-12">
+      <div class="col-md-3">
+      </div>
+      <div class="justify-content-center row col-md-9 col-sm-12 p-2">
+        <button mat-icon-button><i class="fa fa-comment circle" aria-hidden="true"></i></button>
+        <button mat-icon-button (click)="muteMe()"><i [ngStyle]="{'background': isMuted ? '#E34E5F' : ''}" class="fa fa-microphone circle" aria-hidden="true"></i></button>
+        <button mat-icon-button *ngIf="!(isCallStarted$ | async)" (click)="showModal(false)"><i class="fa fa-phone circle" aria-hidden="true"></i></button>
+        <button mat-icon-button *ngIf="(isCallStarted$ | async)" (click)="endCall()"><i class="fa fa-phone circle warn-bg" aria-hidden="true"></i></button>
+        <button mat-icon-button><i class="fa fa-video-camera circle" aria-hidden="true"></i></button>
+        <button mat-icon-button *ngIf="!(isCallStarted$ | async)" (click)="showModal(true)"><i class="fa fa-user-plus circle" aria-hidden="true"></i></button>
+        <button mat-icon-button><i class="fa fa-arrows-alt circle" aria-hidden="true"></i></button>
+      </div>
+    </div>
+  </div>
+</div>

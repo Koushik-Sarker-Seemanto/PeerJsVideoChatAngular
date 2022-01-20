@@ -1,0 +1,120 @@
+.upper-section {
+  text-align: center;
+}
+
+.remote-user {
+  z-index: 1;
+  position: fixed;
+  margin-left: 8px;
+  margin-top: 8px;
+  span {
+    line-height: 20px;
+    color: white;
+    vertical-align: middle;
+  }
+  .round {
+    background: #E34E5F;
+    border-radius: 50%;
+    font-size: 16px;
+    height: 16px;
+    width: 16px;
+    line-height: 16px;
+    vertical-align: middle;
+  }
+}
+
+.warn-color {
+  color: #E34E5F;
+}
+
+.warn-bg {
+  background: #E34E5F;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  background: white;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 2rem;
+}
+
+::ng-deep {
+  .col-xl-10, .col-xl-9, .col-xl-8, .col-xl-7, .col-xl-6, .col-xl-5, .col-xl-4, .col-xl-3, .col-xl-2, .col-xl-1, .col-lg, .col-lg-auto, .col-lg-12, .col-lg-11, .col-lg-10, .col-lg-9, .col-lg-8, .col-lg-7, .col-lg-6, .col-lg-5, .col-lg-4, .col-lg-3, .col-lg-2, .col-lg-1, .col-md, .col-md-auto, .col-md-12, .col-md-11, .col-md-10, .col-md-9, .col-md-8, .col-md-7, .col-md-6, .col-md-5, .col-md-4, .col-md-3, .col-md-2, .col-md-1, .col-sm, .col-sm-auto, .col-sm-12, .col-sm-11, .col-sm-10, .col-sm-9, .col-sm-8, .col-sm-7, .col-sm-6, .col-sm-5, .col-sm-4, .col-sm-3, .col-sm-2, .col-sm-1, .col, .col-auto, .col-12, .col-11, .col-10, .col-9, .col-8, .col-7, .col-6, .col-5, .col-4, .col-3, .col-2, .col-1 {
+    position: relative;
+    width: 100%;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+}
+@media (min-width: 401px) {
+  .video-wrapper {
+    text-align: center;
+    background-color: #343434;
+    border-radius: 8px;
+    border: #E34E5F 4px solid;
+    height: 70vh;
+  }
+  .remote-video {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: #000000;
+  }
+  .local-video {
+    z-index: 1;
+    position: absolute;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    width: 15rem;
+    height: 10rem;
+    max-width: 15rem;
+    max-height: 10rem;
+    border: 3px solid white;
+    border-radius: 8px;
+    background: #000000;
+  }
+}
+
+@media (max-width: 400px) {
+
+   ::ng-deep {
+     .row {
+       margin-left: 0;
+       margin-right: 0;
+     }
+   }
+
+   .video-wrapper {
+     text-align: center;
+     height: 70vh;
+   }
+
+   .remote-video {
+     width: 100%;
+     height: 48%;
+     border-radius: 8px;
+     border: 3px solid #E34E5F;
+     background: #000000;
+   }
+   .local-video {
+     height: 48%;
+     width: 100%;
+     z-index: 1;
+     border: 3px solid #E34E5F;
+     border-radius: 8px;
+     background: #000000;
+     //z-index: 1;
+     //position: absolute;
+     //right: 1.5rem;
+     //bottom: 1.5rem;
+     //width: 10vw;
+     //height: 10vw;
+     //max-width: 10rem;
+     //max-height: 10rem;
+     //border: 3px solid white;
+     //border-radius: 4px;
+   }
+}
